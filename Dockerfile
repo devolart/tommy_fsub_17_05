@@ -22,7 +22,6 @@ RUN rm -f poetry.lock
 
 RUN poetry config virtualenvs.create false \
     && poetry install \
-        --no-lock \
         --only main \
         --no-interaction \
         --no-ansi --no-root
