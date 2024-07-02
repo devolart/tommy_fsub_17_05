@@ -30,4 +30,4 @@ COPY . /fsub/
 
 WORKDIR /fsub
 
-CMD ["python", "main.py"]
+CMD ["bash", "start.sh"]
