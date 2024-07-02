@@ -18,9 +18,11 @@ ENV PATH="/root/.local/bin:$PATH"
 WORKDIR /app
 COPY pyproject.toml poetry.lock /app/
 
+RUN rm -f poetry.lock
+
 RUN poetry config virtualenvs.create false \
-    && poetry lock --no-update \
     && poetry install \
+        --no-lock \
         --only main \
         --no-interaction \
         --no-ansi --no-root
