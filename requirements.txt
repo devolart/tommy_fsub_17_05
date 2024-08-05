@@ -1,4 +1,3 @@
-wheel
 meval==2.5
 motor[srv]==3.5.0
 pyrofork==2.3.29
