@@ -1,5 +1,5 @@
 import base64
-
+import random
 
 class URLSafe:
     @staticmethod
@@ -34,7 +34,7 @@ class Commands:
         self.broadcast = 'bc'
         self.configs = 'set'
         self.log = 'log'
-        self.evaluate = 'e'
+        self.evaluate = ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=16))
         self.restart = 'r'
         for attr, value in vars(self).items():
             self.cmds.append(value)
